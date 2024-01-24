@@ -1,0 +1,5 @@
+v-on:
+    click
+v-if -> if statement
+v-else -> else statement
+v-show -> sets style to show or hidden based on true or false
