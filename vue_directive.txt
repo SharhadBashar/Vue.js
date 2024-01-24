@@ -1,5 +1,11 @@
-v-on:
+v-on: (can be replaced with @)
     click
+    mouseover
+    mouseleave
+    dblclick
+    mousemove
 v-if -> if statement
 v-else -> else statement
 v-show -> sets style to show or hidden based on true or false
+v-for -> for loop
+v-bind: (can be replaced with :) -> bind things to attributes

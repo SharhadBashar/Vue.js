@@ -2,8 +2,8 @@
 <head>
     <meta charset = "UTF-8">
     <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
-    <script src = "https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    
+    <script src = 'https://unpkg.com/vue@3/dist/vue.global.js'></script>
+    <link rel = 'stylesheet' href = 'index.css'>
     <title>Document</title>
 </head>
 <body>
@@ -11,9 +11,25 @@
 
     <div class = 'app'>
         <p>{{title}} - {{age}}</p>
-        <p v-if = "show">Yo bro whats up</p>
-        <button v-on:click = "change_age()">Increase age</button>
+        <p v-if = 'show'>Yo bro whats up</p>
+        <button v-on:click = 'change_age()'>Increase age</button>
+        <a v-bind:href = 'title'>title</a>
+        <div class = 'box' v-on:mouseover = 'handle_event($event, 5)'>Mouse Over</div>
+        <div class = 'box' v-on:mouseleave = 'handle_event()'>Mouse Leave</div>
+        <div class = 'box' v-on:dblclick = 'handle_event()'>Double Click</div>
+        <div class = 'box' v-on:mousemove = 'handle_mousemove($event)'>position = {{x}}, {{y}}</div>
+        <ul>
+            <li v-for = 'book in books' v-on:click = 'change_age()'>
+                {{book.title}}, {{book.author}}
+            </li>
+        </ul>
+        <ul>
+            <li v-for = 'book in filter_books' v-on:click = 'change_age()'>
+                {{book.title}}, {{book.author}}
+            </li>
+        </ul>
     </div>
+
     <script src = "app.js"></script>
 </body>
 </html>
